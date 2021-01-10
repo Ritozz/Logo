@@ -8,7 +8,71 @@
 	<div class="wrapper">
 		@@include('_header.html',{})
 		<main class="page">
-
+         <div class="page__container _container">
+            <aside class="sidebar">
+               <nav class="sidebar__menu menu-sidebar">
+                  <div class="menu-sidebar__header">
+                     <div class="menu-sidebar__title">Каталог товаров</div>
+                     <div class="menu-sidebar__wpapper">
+                        <div class="menu-sidebar__menu-icon">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </div>
+                     </div>             
+                  </div>
+                  <div class="menu-sidebar__body">
+                     <ul>
+                        <li><a data-item='0' href="#" class="menu-sidebar__sublink">Беговые дорожки</a></li>
+                        <li><a data-item='1' href="#" class="menu-sidebar__sublink">Эллиптические тренажеры</a></li>
+                        <li><a href="#">Велотренажеры</a></li>
+                        <li><a href="#">Гребные тренажеры</a></li>
+                        <li><a href="#">Вибромассажеры</a></li>
+                        <li><a data-item='2' href="#" class="menu-sidebar__sublink">Теннисные столы</a></li>
+                        <li><a href="#">Баскетбол</a></li>
+                        <li><a data-item='3' href="#" class="menu-sidebar__sublink">Массажные кресла</a></li>
+                        <li><a data-item='4' href="#" class="menu-sidebar__sublink">Массажные столы </a></li>
+                        <li><a href="#">Силовые тренажеры</a></li>
+                        <li><a href="#">Батуты</a></li>
+                        <li><a href="#">Детские городки</a></li>
+                        <li><a href="#">Дачная мебель</a></li>
+                        <li><a href="#">Уличные спортивные комплексы</a></li>
+                        <li><a href="#">Аксессуары</a></li>
+                     </ul>
+                  </div>
+                  <div class="menu-sidebar__submenu submenu">
+                     <div class="submenu__menu">
+                        <ul>
+                           <li><a href="">Всепогодный</a></li>
+                           <li><a href="">Для помещений</a></li>
+                           <li><a href="">Профессиональный</a></li>
+                           <li><a href="">Любительский</a></li>
+                          
+                        </ul>
+                     </div>
+                     <div class="submenu__item item">
+                        <a href="#" class="item__wrapper">
+                           <div class="item__labels">
+                              <p class="item__label">Товар дня</p>
+                           </div>
+                           <div class="item__img">
+                              <img src="img/products/01.jpg" alt="">
+                           </div>
+                           <p class="item__description">
+                              Домашний теннисный стол Donic Indoor Roller 800 Green
+                           </p>
+                        </a>
+                        <!-- <div class="item__old-price">5500<span>&#8381</span></div> -->
+                        <div class="item__buy">
+                           <a href="#" class="item__cart"></a>
+                           <div class="item__new-price">64 990<span>&#8381</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </nav>
+            </aside>
+            <div class="page__content"></div>
+         </div>
 		</main>
 		@@include('_footer.html',{})
 	</div>

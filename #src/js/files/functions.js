@@ -74,6 +74,33 @@ function menu_close() {
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
 }
+
+
+
+
+
+
+let iconMen = document.querySelector(".icon-tel");
+if (iconMen != null) {
+	let delay = 500;
+	let menuBod = document.querySelector(".menu__tel");
+	iconMen.addEventListener("click", function (e) {
+		if (unlock) {
+			body_lock(delay);
+			iconMen.classList.toggle("_active");
+			menuBod.classList.toggle("_active");
+		}
+	});
+};
+function menu_close() {
+	let iconMen = document.querySelector(".icon-tel");
+	let menuBod = document.querySelector(".menu__tel");
+	iconMen.classList.remove("_active");
+	menuBod.classList.remove("_active");
+}
+
+
+
 //=================
 //BodyLock
 function body_lock(delay) {
@@ -523,3 +550,4 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+
