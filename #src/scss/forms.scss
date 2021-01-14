@@ -18,10 +18,22 @@
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn {
-	display: inline-flex;
-	padding: 0px 0px;
+   display: inline-flex;
+   padding: 0 25px;
+   background: #f68038;
+   font-weight: 900;
+   font-size: 14px;
+   text-transform: uppercase;
+   color: $white;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   transition: all .4s ease;
+
 	@media (min-width: 992px) {
 		&:hover {
+         opacity: 80%;
+         text-decoration: underline;
 		}
 	}
 	&._fw {
@@ -157,8 +169,9 @@ textarea.input {
 		height: 0;
 		opacity: 0;
 		visibility: hidden;
-		&:checked + .checkbox__text:before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+		&:checked + .checkbox__text {
+         color: #f8a780;
+			// background: #fff url("../img/icons/check.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
@@ -171,18 +184,18 @@ textarea.input {
 		letter-spacing: -0.3px;
 		line-height: calc(20 / 16);
 		cursor: pointer;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
-			left: 0;
-			top: 0;
-			width: 20px;
-			height: 18px;
-			background: #fff;
-			border: 1px solid #a7a9ac;
-		}
+		// &:before {
+		// 	content: "";
+		// 	align-self: flex-start;
+		// 	margin: 0px 14px 0px 0px;
+		// 	flex: 0 0 20px;
+		// 	left: 0;
+		// 	top: 0;
+		// 	width: 20px;
+		// 	height: 18px;
+		// 	background: #fff;
+		// 	border: 1px solid #a7a9ac;
+		// }
 	}
 	a {
 		color: #fff;

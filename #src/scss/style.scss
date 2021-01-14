@@ -67,9 +67,10 @@ body {
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "colors";
 @import "forms";
 @import "ui";
-@import "colors";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -248,6 +249,7 @@ body {
 .submenu {
    position: absolute;
    border: 2px solid #098494;
+   background-color: $white;
    top: 0;
    left: 50%;
    height: 100%;
@@ -362,6 +364,132 @@ body {
 }
 
 }
+
+.page {
+
+   &__content {}
+
+   &__search {
+     
+   }
+}
+
+.search-page {
+   display: flex;
+   height: 40px;
+   align-items: center;
+   position: relative;
+
+   &__categories {
+   }
+}
+
+.categories {
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   background-color: #f3f3f3;
+   cursor: pointer;
+   &::before {
+      content: '';
+      background: url('../img/icons/search_page.png') center center no-repeat;
+      height: 17px;
+      width: 17px;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all .4s ease;
+   }
+   &::after {
+      content: '';
+      background: url('../img/icons/search_page_arrows.png') center center no-repeat;
+      height: 17px;
+      width: 17px;
+      display: inline-block;
+      margin: 0 10px;
+      transition: all .4s ease;
+   }
+
+   &._active{
+      &::after{
+         transform: rotate(-180deg);
+      }
+      &::before {
+         transform: rotate(-360deg);
+      }
+   }
+
+   &__title {
+      color: #898989;
+      border-bottom: 1px dotted #898989;
+      font-size: 14px; 
+   }
+
+   &__list {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+      border-left: 1px solid #f3f3f3;
+      border-right: 1px solid #f3f3f3;
+      border-bottom: 5px solid #f68038;
+      // &._active{
+      //    display: block;
+      // }
+   }
+
+   &__row {
+      display: flex;
+   }
+
+   &__col {
+      flex: 0 1 33.333%;
+      padding-left: 40px;
+      border-right: 1px solid #f3f3f3;
+      ul{
+         label{
+            display: block;
+            margin: 20px 0;
+            span{
+               color: #898989;
+               transition: all .4s ease;
+               &:hover{
+                  color: darken(#898989, 20%);
+               }
+            }
+         }
+      }
+      &:last-child{
+         border-right: 0;
+      }
+   }
+}
+
+.search {
+
+   &__field {
+      flex: 1 1 auto;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #f3f3f3;
+      input{
+         padding: 0 20px;
+         height: 100%;
+      }
+   }
+
+   &__input {}
+
+   &__btn {
+
+   }
+}
+
+.btn {}
+
 
 //===================================================================================================================================
 

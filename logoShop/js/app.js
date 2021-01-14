@@ -20,6 +20,14 @@ menuBurger.addEventListener('click', function (e) {
    menuBurger.classList.toggle('_active');
    _slideToggle(menuBurgerBody);
 });
+
+let categoriesBtn = document.querySelector('.categories__title');
+let categoriesBody = document.querySelector('.categories__list');
+
+categoriesBtn.addEventListener('click', function (e) {
+   _slideToggle(categoriesBody);
+   categoriesBtn.parentElement.classList.toggle('_active');
+});
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"
