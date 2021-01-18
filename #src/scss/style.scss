@@ -220,7 +220,7 @@ body {
                   visibility: visible;
                   opacity: 100%;
                   left: 100%;
-                 
+                  transition: all .6s ease;
                 }         
              }
          }
@@ -256,7 +256,7 @@ body {
    width: 280px;
    visibility: hidden;
    opacity: 0;
-   transition: all .6s ease;
+   transition: all .2s ease;
    z-index: -1;
 
    &__menu {
@@ -423,6 +423,20 @@ body {
       color: #898989;
       border-bottom: 1px dotted #898989;
       font-size: 14px; 
+      span:last-child {
+         display: none;
+      }
+   }
+
+ 
+
+   ._categories{
+      span{
+         display: none;
+         &:last-child{
+            display: block !important;
+         }
+      }
    }
 
    &__list {

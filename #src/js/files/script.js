@@ -25,3 +25,41 @@ categoriesBtn.addEventListener('click', function (e) {
    _slideToggle(categoriesBody);
    categoriesBtn.parentElement.classList.toggle('_active');
 });
+
+
+
+let categoriesItem = document.querySelectorAll('.categories__item');
+
+categoriesItem.forEach(item => {
+   item.addEventListener('change', function (e) {
+      item.classList.toggle('_active');
+      let categoriesActiveItems = document.querySelectorAll('.categories__item._active');
+      if (categoriesActiveItems.length) {
+         categoriesBtn.classList.add('_categories');
+         let quantiti = document.querySelector('.quantiti');
+         quantiti.innerHTML = `${quantiti.getAttribute('data-text')} ${categoriesActiveItems.length}`;
+      } else {
+         categoriesBtn.classList.remove('_categories');
+      }
+   });
+})
+
+// let categoriesTitle = document.querySelector('.categories__title');
+// let categoriesItems = document.querySelectorAll('.categories__item');
+
+// for (let i = 0; i < categoriesItems.length; i++) {
+//    let categoriesItem = categoriesItems[i];
+//    categoriesItem.addEventListener('change', function (e) {
+//       categoriesItem.classList.toggle('_active');
+
+//       let categoriesActiveItems = document.querySelectorAll('.categories__item._active');
+
+//       if (categoriesActiveItems.length > 0) {
+//          categoriesTitle.classList.add('_categories');
+//          console.log('added');
+//       } else {
+//          categoriesTitle.classList.remove('_categories');
+//          console.log('removed');
+//       }
+//    });
+// }

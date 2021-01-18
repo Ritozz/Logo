@@ -1450,6 +1450,9 @@ body.ie ._ibg img {
   visibility: visible;
   opacity: 100%;
   left: 100%;
+  -webkit-transition: all .6s ease;
+  -o-transition: all .6s ease;
+  transition: all .6s ease;
 }
 
 @-webkit-keyframes arrow {
@@ -1490,9 +1493,9 @@ body.ie ._ibg img {
   width: 280px;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all .6s ease;
-  -o-transition: all .6s ease;
-  transition: all .6s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
   z-index: -1;
 }
 
@@ -1695,6 +1698,18 @@ body.ie ._ibg img {
   color: #898989;
   border-bottom: 1px dotted #898989;
   font-size: 14px;
+}
+
+.categories__title span:last-child {
+  display: none;
+}
+
+.categories ._categories span {
+  display: none;
+}
+
+.categories ._categories span:last-child {
+  display: block !important;
 }
 
 .categories__list {
