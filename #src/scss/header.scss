@@ -23,19 +23,6 @@
 	}
 }
 .top-header {
-   position: relative;
-   @media (max-width: 550px) {
-      &:after {
-         content: '';
-         position: absolute;
-         top: 0;
-         left: 0;
-         height: 90px;
-         width: 100%;
-         background-color: #1ab9ce;
-         z-index: 2;
-      }
-   }
       
 	// .top-header__content
 
@@ -48,8 +35,8 @@
 	// .top-header__column
 	&__column {
 		flex: 0 1 50%;
-      position: relative;
- 
+        position: relative;
+        z-index: 1;
 
 		&:nth-child(2) {
 			align-self: flex-start;
@@ -59,18 +46,22 @@
 
 			@media (max-width: $md3+px) {
 				padding: 0;
-            align-self: center;
-            z-index: 3;
+                align-self: center;
+                z-index: 3;
 				img {
 					display: inline-block;
 					width: 100px;
 				}
 			}
 		}
+        @media (max-width: 550px) {
+            display: flex;
+            justify-content: space-around;
+        }
 	}
 
 	// .top-header__menu
-	&__menu {       
+	&__menu {      
 		.icon-menu {
 			display: none;
 			@media (max-width: $md2+px) {
@@ -123,6 +114,18 @@
 					display: grid;
 				}
 			}
+            @media (max-width: 992px) {
+                &:after {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 90px;
+                    width: 100%;
+                    background-color: #1ab9ce;
+                    z-index: 2;
+                }
+            } 
 			@media (max-width: $md1+px) {
 				grid-template-columns: 0.3fr 0.3fr 0.3fr;
 			}
@@ -139,9 +142,9 @@
 				align-items: center;
 				padding: 90px 20px 20px 20px;
 				overflow: auto;
-				visibility: hiddden;
+				visibility: hidden;
 				opacity: 0;
-            transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
            
 				&._active {
 					visibility: visible;
@@ -335,6 +338,10 @@
 		height: 63px;
 		align-items: center;
 		justify-content: space-between;
+        padding: 0 42px;
+        @media(max-width: 700px){
+            padding: 0 20px;
+        }
 	}
 
 	// .bottom-header__column
@@ -490,7 +497,7 @@
 		width: 45px;
 		height: 45px;
 		display: flex;
-		margin-left: auto;
+		// margin-left: auto;
 		border: 2px solid $white;
       border-radius: 50%;
       position: relative;
