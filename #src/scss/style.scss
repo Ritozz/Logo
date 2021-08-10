@@ -94,7 +94,6 @@ body {
 }
 
 .sidebar {
-   background: url("../img/bg_menu.jpg") top no-repeat;
    width: 260px;
    color: $white;
    position: relative;
@@ -110,6 +109,7 @@ body {
 
 .menu-sidebar {
    &__header {
+      background: url("../img/bg_menu.jpg") top no-repeat;
       position: relative;
       display: flex;
    }
@@ -167,12 +167,10 @@ body {
       &._active {
          span {
             transform: scale(0);
-
             &:first-child {
                transform: rotate(-45deg);
                top: calc(50% - 1px);
             }
-
             &:last-child {
                transform: rotate(45deg);
                bottom: calc(50% - 1px);
@@ -182,16 +180,15 @@ body {
    }
 
    &__body {
-      display: none;
-      // visibility: hidden;
-      // opacity: 0;
-      // transition: all .4s ease;
-      // margin-top: -100px;
+      background: url("../img/bg_menu.jpg") top no-repeat;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .4s ease;
+    //   margin-top: -100px;
       &._active {
-         display: block;
-         // visibility: visible;
-         // opacity: 100%;
-         // margin-top: 0;
+         visibility: visible;
+         opacity: 100%;
+        //  margin-top: 0;
       }
       ul {
          li {
@@ -214,15 +211,21 @@ body {
             background-position: right 10px center;
             animation: arrow 0.9s infinite linear;
             &:hover {
-               animation: none;
+                animation: none;
             }
             &._active {
-               .submenu {
-                  visibility: visible;
-                  opacity: 100%;
-                  left: 100%;
-                  transition: all 0.6s ease;
-               }
+                .submenu {
+                    visibility: visible;
+                    opacity: 100%;
+                    left: 100%;
+                    transition: all 0.4s ease;
+                    &__menu{
+                        display: block;
+                    }
+                    &__item{
+                        display: block;
+                    }
+                }
             }
          }
          @keyframes arrow {
@@ -263,6 +266,7 @@ body {
       &__menu {
          border-bottom: 1px solid #dedede;
          padding: 20px 0;
+         display: none;
          ul {
             li {
                padding: 0 20px;
@@ -285,6 +289,7 @@ body {
 
       &__item {
          padding: 10px 25px;
+         display: none;
       }
    }
 
@@ -376,6 +381,7 @@ body {
    height: 40px;
    align-items: center;
    position: relative;
+   z-index: -1;
 
    &__categories {
    }
@@ -451,9 +457,6 @@ body {
       border-left: 1px solid #f3f3f3;
       border-right: 1px solid #f3f3f3;
       border-bottom: 5px solid #f68038;
-      // &._active {
-      //    display: block;
-      // }
    }
 
    &__row {
