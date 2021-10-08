@@ -1903,12 +1903,33 @@ window.addEventListener('DOMContentLoaded', () => {
     let headerLine = document.querySelector('[data-cartmove]');
 
     window.addEventListener('resize', () => {
-        if (document.documentElement.clientWidth < 550) {
+        if (document.documentElement.clientWidth < 550 && document.documentElement.clientWidth > 399) {
             cart.remove();
             headerLine.append(cart);
         } else {
             cartParent.append(cart);
         }
     });
+
+    //*                                  News and reviews                                          
+    let news = document.querySelector('.news-side');
+    let reviews = document.querySelector('.rewiews-side');
+    let pageContent = document.querySelector('.page__content');
+    let menuSidebar = document.querySelector('.menu-sidebar');
+
+
+
+    window.addEventListener('resize', function () {
+        if (this.document.documentElement.clientWidth < 992) {
+            reviews.remove();
+            news.remove();
+            pageContent.append(news);
+            pageContent.append(reviews);
+        } else {
+            menuSidebar.append(news);
+            menuSidebar.apepend(reviews);
+
+        }
+    })
 });
 

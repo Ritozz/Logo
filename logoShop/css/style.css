@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:wght@300,400,500,700,900&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext");
 
 @font-face {
   font-family: "Play";
@@ -937,6 +937,11 @@ body.ie ._ibg img {
 ._no-webp .header{
   background: url("../img/bg_header.jpg") center 0 no-repeat; }
 
+.top-header {
+  position: relative;
+  z-index: 5;
+}
+
 .top-header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1299,6 +1304,10 @@ body.ie ._ibg img {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   min-width: 0;
+}
+
+.menu-sidebar {
+  margin: 0 0 40px 0;
 }
 
 ._no-webp .menu-sidebar__header{
@@ -1991,6 +2000,139 @@ body.ie ._ibg img {
   color: #979797;
 }
 
+.side-label {
+  color: #333333;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.news-side {
+  margin-bottom: 40px;
+}
+
+.news-side__label {
+  margin: 0 0 1.66667em 0px;
+}
+
+.news-side__label:hover {
+  color: #fd8322;
+}
+
+.news-side__item {
+  margin-bottom: 45px;
+}
+
+.news-side__item:last-child {
+  margin-bottom: 0;
+}
+
+.news-side__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news-side__data {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  text-align: center;
+  color: #d8d8d8;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.news-side__data span {
+  display: block;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.side-text {
+  padding-left: 15px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.side-title {
+  color: #dadada;
+  font-family: 'uniSans';
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  display: inline-block;
+  margin: 0 0 0.83333em 0px;
+}
+
+.side-title:hover {
+  color: #1ab9ce;
+}
+
+.rewiews-side__review {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.rewiews-side__review:hover .rewiews-side__label {
+  color: #1ab9ce;
+}
+
+.rewiews-side__review:hover .rewiews-side__label span {
+  color: #1ab9ce;
+}
+
+.rewiews-side__review:hover .rewiews-side__text {
+  color: #fff;
+  background-color: #1ab9ce;
+}
+
+.rewiews-side__label {
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #333333;
+  margin: 0 0 0.83333em 0px;
+}
+
+.rewiews-side__labelspan {
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  display: inline-block;
+}
+
+.rewiews-side__text {
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  position: relative;
+  padding: 10px 8px 14px 30px;
+}
+
+.rewiews-side__text::before {
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  content: '"';
+  font-size: 48px;
+  font-weight: 900;
+  position: absolute;
+  left: 8px;
+  top: 22px;
+  color: #dadada;
+}
+
 /*
 //Burger
 .icon-menu {
@@ -2375,8 +2517,18 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 767.98px) {
+  .btn {
+    padding: 0 20px;
+  }
+
   ._no-webp .header{
     background: url("../img/bg_header.jpg") 0 0 no-repeat; }
+
+  .top-header__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 
   .top-header__column:nth-child(2) {
     padding: 0;
@@ -2384,6 +2536,9 @@ body.ie ._ibg img {
         -ms-grid-row-align: center;
         align-self: center;
     z-index: 3;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 
   .top-header__column:nth-child(2) img {
@@ -2415,6 +2570,10 @@ body.ie ._ibg img {
     position: relative;
     z-index: 0;
     width: inherit;
+  }
+
+  .menu-sidebar .item__description {
+    color: #fff;
   }
 
   .categories {

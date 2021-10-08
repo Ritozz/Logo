@@ -6,7 +6,8 @@
 
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
-@import url("https://fonts.googleapis.com/css?family=Roboto:wght@300,400,500,700,900&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext");
+
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
@@ -47,8 +48,6 @@ body {
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
     width: 100%;
-    // min-height: 100%;
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
 
@@ -118,6 +117,8 @@ body {
 }
 
 .menu-sidebar {
+    margin: 0 0 40px 0;
+
     @media (max-width: $md2+px) {
         width: 100%;
         margin-bottom: 20px;
@@ -359,7 +360,7 @@ body {
                     ul {
                         li {
                             a {
-                                color: #fff;
+                                color: $white;
                             }
                         }
                     }
@@ -452,6 +453,10 @@ body {
             font-size: 16px;
             line-height: 22/16 * 100%;
             margin-bottom: 20px;
+
+            @media (max-width: $md3+px) {
+                color: $white;
+            }
         }
 
         &__buy {
@@ -488,12 +493,6 @@ body {
             }
         }
     }
-}
-
-.page {
-    &__content {}
-
-    &__search {}
 }
 
 .search-page {
@@ -694,7 +693,7 @@ body {
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            border: 2px solid #fff;
+            border: 2px solid $white;
             position: relative;
             margin: 0 22px;
             cursor: pointer;
@@ -726,7 +725,7 @@ body {
 
         .swiper-pagination-bullet-active {
             position: relative;
-            border: 4px solid #fff;
+            border: 4px solid $white;
 
             &::after {
                 visibility: visible;
@@ -766,7 +765,7 @@ body {
 
     // .content-mainslider__price
     &__price {
-        color: #fff;
+        color: $white;
         font-size: 36px;
         font-weight: 900;
         line-height: 24px;
@@ -780,7 +779,7 @@ body {
     // .content-mainslider__button
     &__button {
         height: 33px;
-        border: 3px solid #fff;
+        border: 3px solid $white;
         justify-content: center;
         align-items: center;
         display: inline-flex;
@@ -788,7 +787,7 @@ body {
         padding: 0 20px;
         font-weight: 900;
         text-transform: uppercase;
-        color: #fff;
+        color: $white;
 
         &::after {
             content: '';
@@ -815,7 +814,7 @@ body {
 
     // .text-mainslider__text-2
     &__text-2 {
-        color: #fff;
+        color: $white;
         background-color: #92918e;
         padding: 5px 15px 5px 5px;
     }
@@ -825,6 +824,174 @@ body {
         color: #979797;
     }
 }
+
+//*                                   news                                                     
+
+.page {
+
+    // .page__side-news
+    &__side-news {}
+}
+
+.side-label {
+    color: $news_title;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.news-side {
+    margin-bottom: 40px;
+
+    // .news-side__title
+    &__title {}
+
+    &__label {
+        margin: 0 0 20px/12px*1em 0px;
+
+        &:hover {
+            color: $news_label_hover;
+        }
+    }
+
+    // .news-side__items
+    &__items {}
+
+    // .news-side__item
+    &__item {
+        margin-bottom: 45px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .news-side__body
+    &__body {
+        display: flex;
+    }
+
+    // .news-side__data
+    &__data {
+        flex: 0 0 30px;
+        text-align: center;
+        color: $news_span;
+        font-size: 18px;
+        font-weight: 300;
+
+        span {
+            display: block;
+            font-weight: 900;
+            font-size: 24px;
+        }
+    }
+
+    // .news-side__text
+    &__text {}
+}
+
+.side-text {
+    padding-left: 15px;
+    color: $news_text;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+.side-title {
+    color: $news_links;
+    font-family: 'uniSans';
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    display: inline-block;
+    margin: 0 0 25px/30px*1em 0px;
+
+    &:hover {
+        color: $news_links_hover;
+    }
+}
+
+//*                                  rewievs                                         
+
+.page {
+
+    // .page__side-reviews
+
+    &__side-reviews {}
+}
+
+.rewiews-side {
+
+    // .rewiews-side__body
+    &__body {}
+
+    // .rewiews-side__review
+    &__review {
+        display: inline-block;
+        margin-bottom: 20px;
+
+        &:hover {
+            .rewiews-side__label {
+                color: $news_links_hover;
+            }
+
+            .rewiews-side__label span {
+                color: $news_links_hover;
+            }
+
+            .rewiews-side__text {
+                color: $white;
+                background-color: $news_links_hover;
+            }
+        }
+    }
+
+    // .rewiews-side__label
+    &__label {
+        transition: all .4s ease;
+        display: flex;
+        justify-content: space-between;
+        color: $news_title;
+        margin: 0 0 10px/12px*1em 0px;
+
+        &span {
+            transition: all .4s ease;
+            display: inline-block;
+        }
+    }
+
+    // .rewiews-side__text
+    &__text {
+        transition: all .4s ease;
+        position: relative;
+        padding: 10px 8px 14px 30px;
+
+        &::before {
+            transition: all .4s ease;
+            content: '"';
+            font-size: 48px;
+            font-weight: 900;
+            position: absolute;
+            left: 8px;
+            top: 22px;
+            color: $news_links;
+        }
+    }
+}
+
+.reviwes-side {
+
+    // .reviwes-side__title
+    &__title {}
+}
+
+.side-title {}
+
+.side-label {}
+
 
 
 

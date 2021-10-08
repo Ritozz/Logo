@@ -13,9 +13,6 @@
 .header {
     background: url("../img/bg_header.jpg") center 0 no-repeat;
 
-    // .header__top
-    &__top {}
-
     // .header__bottom
     &__bottom {}
 
@@ -25,6 +22,8 @@
 }
 
 .top-header {
+    position: relative;
+    z-index: 5;
 
     // .top-header__content
 
@@ -40,6 +39,10 @@
         position: relative;
         z-index: 1;
 
+        @media (max-width: $md3+px) {
+            flex: 1 1 auto;
+        }
+
         &:nth-child(2) {
             align-self: flex-start;
             padding: 25px 0 0 0;
@@ -50,6 +53,7 @@
                 padding: 0;
                 align-self: center;
                 z-index: 3;
+                flex: 1 1 auto;
 
                 img {
                     display: inline-block;
